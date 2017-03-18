@@ -66,6 +66,8 @@ namespace DevRock05
 
         (int age, string name, double salary) GetInfo() => (20, "wk", 100.0);
 
+        int Process((int x, string y, double z) p) => p.x;
+
         [Fact]
         public void ValueTuples() {
             var (a,b) = (100, 200);
@@ -81,6 +83,18 @@ namespace DevRock05
 
             var (age, name, salary) = GetInfo();
             Assert.True(age == 20);
+
+            var p = (100, "wk", 100.0);
+            var result = Process(p);
+            Assert.True(result == 100);
+        }
+
+        [Fact]
+        public void LocalFunction() {
+            var v = GetValue();
+            Assert.True(v == 100);
+
+            int GetValue() => 100;
         }
     }
 }

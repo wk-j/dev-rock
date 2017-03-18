@@ -61,9 +61,26 @@ namespace DevRock05
             var k  = 100_100.00_01;
         }
 
+        (int x, int y) GetValue() => (1,2);
+        (int, int) GetValue2() => (100, 200);
+
+        (int age, string name, double salary) GetInfo() => (20, "wk", 100.0);
+
         [Fact]
         public void ValueTuples() {
             var (a,b) = (100, 200);
+
+            var (x,y) = GetValue();
+            var value = GetValue();
+            Assert.True(x == 1);
+            Assert.True(y == 2);
+            Assert.True(value.ToTuple().Item1 == 1);
+
+            var value2 = GetValue2();
+            Assert.True(value2.Item1 == 100);
+
+            var (age, name, salary) = GetInfo();
+            Assert.True(age == 20);
         }
     }
 }

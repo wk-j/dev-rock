@@ -1,5 +1,3 @@
-
-
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace Web.TagHelpers {
@@ -10,9 +8,7 @@ namespace Web.TagHelpers {
         [HtmlAttributeNameAttribute("name")]
         public string Name { set;get;}
 
-        public ImageTagHelper() {
-
-        }
+        public ImageTagHelper() { }
 
         public override void Process(TagHelperContext context, TagHelperOutput output) {
 

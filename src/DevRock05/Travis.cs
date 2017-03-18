@@ -3,7 +3,7 @@ using System;
 
 public class Travis {
 
-    int Add(int a, int b) => a + b + 1;
+    int Add(int a, int b) => a + b;
 
     [Fact]
     public void TestAdd() {

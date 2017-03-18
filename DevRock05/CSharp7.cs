@@ -96,5 +96,29 @@ namespace DevRock05
 
             int GetValue() => 100;
         }
+
+        // Old Value Pattern => Swich Case 
+        // C# 7 Type Pattern => Pattern Matching
+
+        [Fact]
+        public void PatternMaching() {
+            Car x = new Toyota { T = 100 };
+            switch(x) {
+                case Toyota t when (t.T == 100) :
+                    Assert.True(t.T == 100);
+                    break;
+                case Nisson n :
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    class Car {}
+    class Toyota : Car {
+        public int T { set;get; }
+    }
+    class Nisson : Car {
+        public int N { set;get;}
     }
 }

@@ -1,6 +1,6 @@
 ## Dev Rocks March 18, 2016
 
-[![Build Status](https://travis-ci.org/wk-j/dev-rock.svg?branch=master)](https://travis-ci.org/wk-j/dev-rock)
+[![Build Status](https://travis-ci.org/wk-j/dev-rocks.svg?branch=master)](https://travis-ci.org/wk-j/dev-rocks)
 
 ## Topics
 
